@@ -1,27 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>prac</title>
-  <style>
-    body {
-      margin: 0;
-      height: 100vh;
-      display: grid;
-      place-items: center;
-      background: #f4f4f4;
-      font-family: Arial, sans-serif;
-    }
-    h1 {
-      font-size: 2.5rem;
-      color: #222;
-      text-align: center;
-      padding: 0 1rem;
-    }
-  </style>
-</head>
-<body>
-  <h1>Hello from prac</h1>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>prac</title>
+    <style>
+      :root {
+        --bg: #0f172a;
+        --panel: #111827;
+        --text: #e5e7eb;
+        --muted: #94a3b8;
+        --accent: #38bdf8;
+      }
+      * { box-sizing: border-box; }
+      body {
+        margin: 0;
+        min-height: 100vh;
+        display: grid;
+        place-items: center;
+        font-family: Arial, Helvetica, sans-serif;
+        background: var(--bg);
+        color: var(--text);
+      }
+      .card {
+        width: min(90vw, 720px);
+        background: var(--panel);
+        padding: 40px 32px;
+        border-radius: 16px;
+        border: 1px solid rgba(148, 163, 184, 0.2);
+        text-align: center;
+        box-shadow: 0 20px 48px rgba(0,0,0,0.3);
+      }
+      h1 {
+        margin: 0 0 12px;
+        font-size: clamp(2rem, 4vw, 3rem);
+      }
+      p {
+        margin: 0;
+        color: var(--muted);
+        font-size: 1.1rem;
+        line-height: 1.6;
+      }
+      .badge {
+        display: inline-block;
+        margin-top: 18px;
+        padding: 8px 14px;
+        background: rgba(56, 189, 248, 0.12);
+        border: 1px solid rgba(56, 189, 248, 0.35);
+        border-radius: 999px;
+        color: var(--accent);
+        font-weight: 600;
+      }
+    </style>
+  </head>
+  <body>
+    <main class="card">
+      <h1>prac</h1>
+      <p>This repository is ready to be published with GitHub Pages.</p>
+      <div class="badge">GitHub Pages ready</div>
+    </main>
+  </body>
 </html>
